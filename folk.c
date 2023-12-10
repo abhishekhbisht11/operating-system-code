@@ -1,0 +1,31 @@
+//folk command
+
+#include<stdio.h> 
+#include<sys/types.h> 
+#include<unistd.h>
+int main() 
+{
+//int a; 
+    if(fork()) 
+    {
+        if(!fork()) 
+        { fork();
+            printf("1\n");
+        }
+        else
+        {
+            printf("2\n");
+        } 
+    }
+    
+    else
+    {
+    printf("3\n");
+    }
+
+    printf("4\n"); 
+    return 0;
+}
+
+
+
